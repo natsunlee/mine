@@ -1,9 +1,12 @@
-export PATH=${HOME}/.local/bin:${PATH}:/opt/homebrew/bin
+export PATH=${HOME}/.local/bin:${PATH}
+
+# Load utils into PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(pyenv init -)"
 
 # Python-reltaed configs
 export POETRY_VIRTUALENVS_IN_PROJECT=true
 export POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON=true
-eval "$(pyenv init -)"
 
 # Java-related configs
 export JAVA_HOME=/opt/java/current
