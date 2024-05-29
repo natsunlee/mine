@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing basic utilities"
-brew install neovim pyenv readline xz
+brew install neovim pyenv readline xz pyright
 
 BASEDIR=$(realpath $(dirname ${0}))
 echo "Script directory determined to be ${BASEDIR}"
