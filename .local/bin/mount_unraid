@@ -6,5 +6,5 @@ then
     exit 1
 fi
 
-mkdir -p ~/unraid/${1}
-sudo mount -o vers=3,rw -t nfs unraid.sys.sando.io:/mnt/user/${1} ~/unraid/${1}
+mkdir -p ~/nfs/${1}
+sudo mount -o vers=3,rw -t nfs unraid.sys.sando.io:/mnt/user/${1} ~/nfs/${1}
