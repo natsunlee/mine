@@ -3,6 +3,9 @@ export PATH=${HOME}/.local/bin:${PATH}
 # Load utils into PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init -)"
+eval "$(zoxide init zsh)"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Python-reltaed configs
 export POETRY_VIRTUALENVS_IN_PROJECT=true
