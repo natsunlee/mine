@@ -19,10 +19,6 @@ ln -s ${BASEDIR}/.zprofile ~/.zprofile
 
 source ~/.zprofile
 
-# Need to update this with password
-echo "Generating copy of .pypirc. Please add password later..."
-cp ${BASEDIR}/.pypirc ~/.pypirc
-
 # Ensure local bin dir exists
 mkdir -p ~/.local/bin
 
