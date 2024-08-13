@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ $# -lt 1 ]
-then
-    echo "usage: ${0} <share_name>"
-    exit 1
-fi
-
-sudo umount ~/nfs/${1}
