@@ -4,7 +4,7 @@
 
 
 ## Dependencies
-`brew install neovim pyenv readline xz pyright fzf zoxide bat eza stow`
+`brew install neovim pyenv readline xz pyright fzf zoxide bat eza stow font-fira-code`
 
 ## Install dotfiles
 `stow .`
