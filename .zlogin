@@ -1,13 +1,12 @@
 export PATH=${HOME}/.local/bin:${PATH}
 
-# Load utils into PATH
+# Bootstrap utils...
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(pyenv init -)"
 eval "$(zoxide init zsh)"
-# Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# Python-reltaed configs
+# Python-related configs
 export POETRY_VIRTUALENVS_IN_PROJECT=true
 export POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON=true
 
@@ -23,3 +22,8 @@ DISABLE_AUTO_TITLE="true"
 precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
+
+# Aliases
+alias ls='eza'
+alias cat='bat'
+alias cd='z'
