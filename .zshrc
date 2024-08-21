@@ -6,6 +6,11 @@ if [ -f /opt/homebrew/bin/brew ]; then
 elif [ -f /usr/local/bin/brew ]; then
 	eval "$(/usr/local/bin/brew shellenv)"
 fi
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+	eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/unicorn.omp.json)"
+fi
+
 eval "$(pyenv init -)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
@@ -31,3 +36,8 @@ precmd() {
 alias ls='eza'
 alias cat='bat'
 alias cd='z'
+
+
+change_theme () {
+	eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/$1.omp.json)"
+}
