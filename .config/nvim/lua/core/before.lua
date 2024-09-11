@@ -3,6 +3,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
+-- Disable behavior for wrapping around to start of file when moving to next search match
+vim.opt.wrapscan = false
+
 -- Global whitespace options
 vim.opt.list = true
 vim.opt.listchars:append({ space = '·' })
