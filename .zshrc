@@ -37,7 +37,7 @@ alias ls='eza'
 alias cat='bat'
 alias cd='z'
 
-
 change_theme () {
 	eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/$1.omp.json)"
 }
+
