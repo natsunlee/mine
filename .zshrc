@@ -22,6 +22,13 @@ export POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON=true
 # Java-related configs
 export JAVA_HOME=/opt/java/current
 
+# GoLang-related configs
+export GOENV_ROOT=${HOME}/.goenv
+export PATH=${GOENV_ROOT}/bin:${PATH}
+eval "$(goenv init -)"
+export PATH=${GOROOT}/bin:${PATH}
+export PATH=${PATH}:${GOPATH}/bin
+
 # Misc build configs
 export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include -I/opt/homebrew/opt/libpq/include"
