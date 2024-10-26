@@ -68,9 +68,6 @@ cask 'docker'
 cask 'wezterm'
 
 # Other
-cask 'qbittorrent'
-cask 'surfshark'
-cask 'chatgpt'
 cask 'arc'
 cask 'spotify'
 
