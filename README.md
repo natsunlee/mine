@@ -4,7 +4,14 @@
 
 
 ## Dependencies
-`brew install neovim pyenv readline xz pyright fzf zoxide bat eza stow font-fira-code jandedobbeleer/oh-my-posh/oh-my-posh`
+Install Homebrew
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+Install Homebrew Bundle
+`brew tap Homebrew/bundle`
+
+## Install Brewfile
+`brew bundle`
 
 ## Install dotfiles
 `stow .`
