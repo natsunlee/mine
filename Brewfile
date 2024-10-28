@@ -63,7 +63,7 @@ cask 'cursorsense'
 cask 'parsec'
 cask 'steam'
 
-# SWE
+# Work
 cask 'docker'
 cask 'wezterm'
 
