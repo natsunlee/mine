@@ -14,6 +14,19 @@ return {
       -- RUST
       lspconfig.rust_analyzer.setup({})
 
+      -- GOLANG
+      lspconfig.gopls.setup({
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+          },
+        },
+      })
+
       -- PYTHON
       lspconfig.pyright.setup({
         -- Add ability for pyright to discover the correct virtualenv. Works with global setting in Poetry for

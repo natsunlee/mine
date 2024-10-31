@@ -66,6 +66,7 @@ cask 'steam'
 # Work
 cask 'docker'
 cask 'wezterm'
+cask 'alacritty'
 
 # Other
 cask 'arc'
