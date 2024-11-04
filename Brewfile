@@ -18,6 +18,7 @@ brew 'git'
 brew 'neovim'
 brew 'fzf'
 brew 'mas'
+brew 'tmux'
 
 # GoLang
 brew 'goenv'
