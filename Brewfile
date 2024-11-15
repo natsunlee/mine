@@ -66,12 +66,13 @@ cask 'steam'
 
 # Work
 cask 'docker'
-cask 'wezterm'
 cask 'alacritty'
+cask 'obsidian'
 
 # Other
-cask 'arc'
+cask 'librewolf'
 cask 'spotify'
+cask 'stolendata-mpv'
 
 
 #############
