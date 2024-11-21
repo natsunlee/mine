@@ -18,3 +18,16 @@ Install Homebrew Bundle
 
 ## Reset icon cache for MacOS after swapping app icons
 `rm /var/folders/*/*/*/com.apple.dock.iconcache; killall Dock`
+
+## Nix Install via Determinate
+```
+curl \
+  --proto '=https' \
+  --tlsv1.2 \
+  -sSf \
+  -L https://install.determinate.systems/nix \
+  | sh -s -- install
+```
+
+## Apply Darwin configs
+`nix run nix-darwin -- --flake github:natsunlee/mine#base`
