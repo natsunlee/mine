@@ -25,7 +25,7 @@
 	finder.FXPreferredViewStyle = "icnv"; # icon view. Other options are: Nlsv (list), clmv (column), Flwv (cover flow)
         screencapture.location = "~/Pictures/screenshots";
         screensaver.askForPasswordDelay = 10; # in seconds
-      }
+      };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
