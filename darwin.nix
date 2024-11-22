@@ -1,4 +1,4 @@
-{ pkgs, ... }
+{ rev, ... }: { pkgs, ... }:
 
 {
   # List packages installed in system profile. To search by name, run:
@@ -6,7 +6,6 @@
   environment.systemPackages =
     [
       pkgs.vim
-      pkgs.neovim
     ];
 
   security.pam.enableSudoTouchIdAuth = true;
@@ -52,13 +51,14 @@
     WindowManager = {
       EnableStandardClickToShowDesktop = false;
     };
-      };
+  };
 
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 
   # Set Git commit hash for darwin-version.
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+  #system.configurationRevision = self.rev or self.dirtyRev or null;
+  system.configurationRevision = rev;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog

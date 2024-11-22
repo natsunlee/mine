@@ -6,11 +6,16 @@
   # Let home-manager install and manage itself
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+    neovim
 
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
+    # Basic Utilities
+    tmux
+    fzf
+    zoxide
+    bat
+    eza
+  ];
 
   home.file = {
     ".wezterm.lua".source = ./.wezterm.lua;
