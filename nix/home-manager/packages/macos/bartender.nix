@@ -1,0 +1,5 @@
+{
+  programs.bartender = {
+    enable = true;
+  };
+}

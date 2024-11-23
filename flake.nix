@@ -24,10 +24,12 @@
 	    user = "nathan";
 	  }
 	)
-        home-manager.darwinModules.home-manager {
+        home-manager.darwinModules.home-manager
+	{
+          nixpkgs.config.allowUnfree = true;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-	  home-manager.users.nathan = import ./home.nix;
+	  home-manager.users.nathan = import ./nix/home-manager/home.nix;
         }
       ];
     };

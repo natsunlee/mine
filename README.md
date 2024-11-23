@@ -29,5 +29,8 @@ curl \
   | sh -s -- install
 ```
 
+## Install Rosetta to Allow Compiling Intel Binaries
+`softwareupdate --install-rosetta --agree-to-license`
+
 ## Apply Darwin configs
 `nix run nix-darwin -- --flake github:natsunlee/mine#base`

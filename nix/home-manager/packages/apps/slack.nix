@@ -1,0 +1,5 @@
+{
+  programs.slack = {
+    enable = true;
+  };
+}

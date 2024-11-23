@@ -1,0 +1,5 @@
+{
+  programs.mos = {
+    enable = true;
+  };
+}
