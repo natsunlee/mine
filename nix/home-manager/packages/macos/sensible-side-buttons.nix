@@ -1,5 +1,5 @@
+{ pkgs, ... }:
+
 {
-  programs.sensible-side-buttons = {
-    enable = true;
-  };
+  home.packages = with pkgs; [ sensible-side-buttons ];
 }

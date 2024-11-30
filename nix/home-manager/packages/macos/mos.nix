@@ -1,5 +1,5 @@
+{ pkgs, ... }:
+
 {
-  programs.mos = {
-    enable = true;
-  };
+  home.packages = with pkgs; [ mos ];
 }

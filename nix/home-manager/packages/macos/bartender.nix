@@ -1,5 +1,5 @@
+{ pkgs, ... }:
+
 {
-  programs.bartender = {
-    enable = true;
-  };
+  home.packages = with pkgs; [ bartender ];
 }

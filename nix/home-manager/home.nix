@@ -40,33 +40,20 @@ in
 
   fonts.fontconfig.enable = true;
 
-  # Automatically add packages described by flakes in specified dirs
+  # Automatically add packages described by flakes in specified dirs.
+  # Full list of things configurable via `programs.<name>` available at
+  # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.abook.enable
   imports = nixFilesInDirectories [
+    ./packages/apps
     ./packages/cli
+    ./packages/macos
   ];
 
   home.packages = with pkgs; [
-    # Communications
-    slack
-    discord
-    
-    # MacOS Utilities
-    bartender
-    sensible-side-buttons
-    mos
-
     # Other
     arc-browser
-    spotify
-    mpv
-    alacritty
-    obsidian
 
     # Fonts
     (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
-
-  #home.file = {
-  #  ".wezterm.lua".source = ./.wezterm.lua;
-  #};
 }

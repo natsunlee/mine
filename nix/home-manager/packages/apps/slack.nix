@@ -1,5 +1,5 @@
+{ pkgs, ... }:
+
 {
-  programs.slack = {
-    enable = true;
-  };
+  home.packages = with pkgs; [ slack ];
 }
