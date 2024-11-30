@@ -39,11 +39,18 @@ precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
+# Enable completions based on chars anywhere in word
+zstyle ':completion:*' completer _complete
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+autoload -Uz compinit
+compinit
+
 # Aliases
 alias ls='eza'
 alias cat='bat'
 alias cd='z'
 
+# Functions
 change_theme () {
 	eval "$(oh-my-posh init zsh --config ${HOME}/.config/oh-my-posh/$1.omp.json)"
 }
