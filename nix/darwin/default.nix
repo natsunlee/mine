@@ -30,12 +30,16 @@
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages =
-    [
-      pkgs.vim
-    ];
+  #environment.systemPackages =
+  #  [
+  #    pkgs.vim
+  #  ];
 
   homebrew = import ./homebrew.nix;
+  imports = [
+    ../packages/macos/paprika-recipe-manager-3.nix
+    ../packages/macos/caffeinated.nix
+  ];
 
   # https://mynixos.com/nix-darwin/options/system.defaults
   system.defaults = {
@@ -61,7 +65,6 @@
       FXPreferredViewStyle = "clmv"; # icon view. Other options are: Nlsv (list), clmv (column), Flwv (cover flow)
       ShowPathbar = true;
       ShowStatusBar = true;
-      _FXShowPosixPathInTitle = true;
       FXEnableExtensionChangeWarning = false;
     };
 
@@ -85,10 +88,12 @@
 
     # Disable mouse acceleration.
     # Proper nix-darwin setting pending (https://github.com/LnL7/nix-darwin/pull/1037).
-    CustomSystemPreferences.NSGlobalDomain."com.apple.mouse.linear" = true;
+    #CustomSystemPreferences = {
+    #  NSGlobalDomain."com.apple.mouse.linear" = true;
+    #};
 
     CustomUserPreferences = {
-      NSGlobalDomain."com.apple.mouse.linear" = true;
+      #NSGlobalDomain."com.apple.mouse.linear" = true;
 
       "com.apple.desktopservices" = {
         # Avoid creating .DS_Store files on network or USB volumes

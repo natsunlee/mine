@@ -57,14 +57,6 @@
         ./nix/darwin
         nix-homebrew.darwinModules.nix-homebrew (import ./nix/homebrew)
 	home-manager.darwinModules.home-manager (import ./nix/home-manager)
-        #home-manager.darwinModules.home-manager
-	#{
-        #  nixpkgs.config.allowUnfree = true;
-	#  home-manager.system = "aarch64-darwin";
-        #  home-manager.useGlobalPkgs = true;
-        #  home-manager.useUserPackages = true;
-	#  home-manager.users.nathan = import ./nix/home-manager/home.nix;
-        #}
       ];
     };
 

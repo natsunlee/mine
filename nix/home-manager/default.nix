@@ -1,19 +1,18 @@
-{ machineConfig, pkgs, ... }:
+{ machineConfig, pkgs, lib, ... }:
 
 let
   nixFilesInDirectory = directory:
     (
-      map (file: "${directory}/${file}")
       (
         builtins.filter
           (
-            nodeName:
-              (builtins.isList (builtins.match ".+\.nix$" nodeName)) &&
+            node:
+              (builtins.isList (builtins.match ".+\.nix$" (builtins.toString node))) &&
               # checking that it is NOT a directory by seeing
               # if the node name forcefully used as a directory is an invalid path
-              (!builtins.pathExists "${directory}/${nodeName}/.")
+              (!builtins.pathExists "${builtins.toString node}/.")
           )
-          (builtins.attrNames (builtins.readDir directory))
+          (lib.filesystem.listFilesRecursive directory)
       )
     );
 
@@ -52,7 +51,7 @@ in
         arc-browser
 
         # Fonts
-        (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+	fira-code
       ];
     };
   };
